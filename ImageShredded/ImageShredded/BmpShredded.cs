@@ -101,8 +101,12 @@ namespace ImageShredded
                 return null;
             }
             var rect = new Rectangle(pixX, pixY, width, heigh);
-            
-            return image.Clone(rect,PixelFormat.DontCare);
+            var drawRect = new Rectangle(0, 0, width, heigh);
+            var result = new Bitmap(rect.Width,rect.Height);
+            var g = Graphics.FromImage(result);
+            g.DrawImage(image,drawRect, rect,GraphicsUnit.Pixel);
+            g.Dispose();    
+            return result;
         }
     }
 }
