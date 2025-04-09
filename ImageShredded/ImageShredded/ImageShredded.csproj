@@ -5,6 +5,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <AssemblyName>imgsrdlib</AssemblyName>
+    <Authors>hayato takahashi</Authors>
+    <Company>hayato takahashi</Company>
   </PropertyGroup>
 
   <ItemGroup>
